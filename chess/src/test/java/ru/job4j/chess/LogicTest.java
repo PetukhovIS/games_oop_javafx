@@ -30,8 +30,8 @@ public class LogicTest {
         OccupiedCellException exception = assertThrows(OccupiedCellException.class, () -> {
             logic.move(Cell.C1, Cell.G5);
         });
-        assertThat(exception.getMessage()).isEqualTo("The user moves the piece not " +
-                "according to the rules of chess");
+        assertThat(exception.getMessage()).isEqualTo("The user moves the piece not "
+               + "according to the rules of chess");
     }
 
     @Test
