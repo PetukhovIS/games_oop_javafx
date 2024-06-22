@@ -30,7 +30,8 @@ public class LogicTest {
         OccupiedCellException exception = assertThrows(OccupiedCellException.class, () -> {
             logic.move(Cell.C1, Cell.G5);
         });
-        assertThat(exception.getMessage()).isEqualTo("The user moves the piece not according to the rules of chess");
+        assertThat(exception.getMessage()).isEqualTo("The user moves the piece not " +
+                "according to the rules of chess");
     }
 
     @Test
@@ -42,7 +43,7 @@ public class LogicTest {
         ImpossibleMoveException exception = assertThrows(ImpossibleMoveException.class, () -> {
             logic.move(Cell.C1, Cell.C4);
         });
-        assertThat(exception.getMessage()).isEqualTo("Could not move by diagonal from %s to %s",  bishopBlackSource.position(),
-                Cell.C4);
+        assertThat(exception.getMessage()).isEqualTo("Could not move by diagonal from %s to %s",
+                bishopBlackSource.position(), Cell.C4);
     }
 }
