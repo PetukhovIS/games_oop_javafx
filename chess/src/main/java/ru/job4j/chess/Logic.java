@@ -24,7 +24,8 @@ public final class Logic {
         for (Figure figure : figures) {
             for (Cell step : steps) {
                 if (figure != null && figure.position().equals(step)) {
-                    throw new OccupiedCellException("The user moves the piece not according to the rules of chess");
+                    throw new OccupiedCellException("The user moves the piece not " +
+                            "according to the rules of chess");
                 }
             }
         }
